@@ -54,4 +54,12 @@ function euclidGcd(a, b) {
   return euclidGcd(min, remainder);
 }
 
-console.log(GcdWhile(105, 36));
+
+function calculateLcm(a, b) {
+  const getHcf = euclidGcd(a, b);
+
+  return (a * b) / getHcf;
+};
+
+
+console.log(calculateLcm(2,9));
