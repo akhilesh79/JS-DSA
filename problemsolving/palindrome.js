@@ -32,5 +32,5 @@ function checkArmstrong(n){
     } else console.log("Not a Armstrong");
 }
 
-checkPalindrome(12321);
+checkPalindrome(9);
 checkArmstrong(1634);
