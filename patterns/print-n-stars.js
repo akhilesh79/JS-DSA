@@ -5,6 +5,17 @@
 
 /* strings are immutable in javascript */
 
+/* 
+  1. unary operators will be apply on only one operands like
+     ++a, --a, a++, a--, +a(converts and returns number),
+     -a(convert to number and return after negate the value),
+     typeof , !;
+  2. entry controlled and exit controlled loop -> while and do-while
+  3. type of normal string literals and string created using
+     new String("krishna") is different , so === comp will be
+     false.
+*/
+
 
 /* this is also know coersion */
 function printNStars(n) {
