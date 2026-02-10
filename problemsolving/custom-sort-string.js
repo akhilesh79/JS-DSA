@@ -25,6 +25,8 @@ const customSortString = function (order, s) {
     }
   }
 
+  // repeat method in javascript
+
   return ans;
 };
 
