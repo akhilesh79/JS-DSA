@@ -1,9 +1,11 @@
 const arr = [-1, 0, 3, 5, 9, 12];
 
 const binarySearch = (target) => {
+  // TC- O(logn) SC - O(1)
   let startI = 0;
   let endI = arr.length - 1;
   for (; startI <= endI; ) {
+    // while(startI <= endI)
     let mid = Math.floor((startI + endI) / 2);
     if (arr[mid] == target) {
       return mid;
