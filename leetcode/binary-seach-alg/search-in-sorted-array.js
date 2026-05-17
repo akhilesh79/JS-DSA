@@ -1,0 +1,48 @@
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number}
+ */
+var search = function (nums, target) {
+  let l = 0;
+  let r = nums.length - 1;
+  while (l <= r) {
+    let mid = l + Math.floor((r - l) / 2);
+    if (nums[mid] == target) return mid;
+
+    if (nums[l] <= nums[mid]) {
+      // left sorted
+
+      // check if target lies in between the left space or not
+      if (target >= nums[l] && target < nums[mid]) {
+        r = mid - 1;
+      } else {
+        l = mid + 1;
+      }
+    } else {
+      // right sorted
+
+      // check if target lies in between the right space or not
+      if (target > nums[mid] && target <= nums[r]) {
+        l = mid + 1;
+      } else {
+        r = mid - 1;
+      }
+    }
+  }
+
+  return -1;
+};
+
+// Example 1:
+
+// Input: nums = [4,5,6,7,0,1,2], target = 0
+// Output: 4
+// Example 2:
+
+// Input: nums = [4,5,6,7,0,1,2], target = 3
+// Output: -1
+// Example 3:
+
+// Input: nums = [1], target = 0
+// Output: -1
