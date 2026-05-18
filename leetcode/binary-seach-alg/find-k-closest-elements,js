@@ -1,0 +1,28 @@
+var findClosestElements = function (arr, k, x) {
+  let l = 0;
+  r = arr.length - 1;
+  while (l < r) {
+    let mid = l + Math.floor((r - l) / 2);
+    let a = arr[mid];
+    let b = arr[mid + k];
+    if (b - x < x - a) {
+      l = mid + 1;
+    } else {
+      r = mid;
+    }
+  }
+
+  return arr.slice(l, l + k);
+};
+
+// Example 1:
+
+// Input: arr = [1,2,3,4,5], k = 4, x = 3
+
+// Output: [1,2,3,4]
+
+// Example 2:
+
+// Input: arr = [1,1,2,3,4,5], k = 4, x = -1
+
+// Output: [1,1,2,3]
